@@ -4,8 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="page-wrapper">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">BREAKING NEWS</div>
+      <ul class="nav-links">
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Navigasi</a></li>
+        <li><a href="#">Peristiwa</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <input type="search" class="search-box" placeholder="Search...">
+    </header>
 
+    <!-- BREAKING NEWS TICKER -->
+    <div class="breaking-ticker">
+      <span class="ticker-badge">Live</span>
+      <span>BREAKING NEWS TICKER: Laporan terkini langsung dari lokasi kejadian...</span>
+    </div>
+
+    <!-- KONTEN UTAMA (8-COL / 4-COL GRID) -->
+    <main class="main-grid">
+      
+      <!-- Kolom Kiri (8 Kolom) -->
+      <article>
+        <div class="hero-media"><img src="Gambar/awan.png" alt=""></div>
+        <h1 class="hero-title">Solliawan Mahasiswa yang Menolak Menjadi Wapres Karena Terlalu Sibuk</h1>
+        <p class="hero-lead">Setelah diwawancarai di kediamannya yang beralamat di kos-kosan warna biru, kamar nomor 5, Saudara Solliawan menolak tegas untuk menjadi wapres sebagai pengganti Gibran.
+"Saya tidak mau karena saya belum S1 dan takutnya ini menjadi polemik yang berkepanjangan di kemudian hari," ujarnya saat kami datang mewawancarai.</p>
+
+        <!-- Live Updates Timeline -->
+        <section class="timeline-section">
+          <h2>Live Updates Timeline</h2>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-time">13:05 WITA • TERBARU</div>
+              <h3>Pembaruan situasi terkini dari narasumber resmi di lapangan</h3>
+              <p>Detail perkembangan terbaru mengenai langkah penanganan dan dampak yang terjadi.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">12:30 WITA</div>
+              <h3>Kronologi awal kejadian mulai terungkap</h3>
+              <p>Informasi awal yang dihimpun tim redaksi dari sejumlah saksi mata di sekitar lokasi.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Kolom Kanan / Sidebar (4 Kolom) -->
+      <aside class="sidebar">
+        <!-- Trending -->
+        <div class="widget-box">
+          <h2 class="widget-title">Trending</h2>
+          <ul class="trending-list">
+            <li>#1 Topik Hangat Hari Ini</li>
+            <li>#2 Kebijakan Baru Pemerintah</li>
+            <li>#3 Perkembangan Ekonomi Nasional</li>
+          </ul>
+        </div>
+
+        <!-- Live Banner / Ads -->
+        <div class="live-banner">LIVE BANNER / ADS</div>
+
+        <!-- Berita Terpopuler -->
+        <div class="widget-box">
+          <h2 class="widget-title">Berita Terpopuler</h2>
+          <div class="popular-item">
+            <div class="popular-thumb"></div>
+            <div>Judul berita terpopuler pertama yang paling banyak dibaca</div>
+          </div>
+          <div class="popular-item">
+            <div class="popular-thumb"></div>
+            <div>Judul berita terpopuler kedua hari ini</div>
+          </div>
+          <div class="popular-item">
+            <div class="popular-thumb"></div>
+            <div>Judul berita terpopuler ketiga minggu ini</div>
+          </div>
+        </div>
+      </aside>
+
+    </main>
+  </div>
 </body>
 </html>

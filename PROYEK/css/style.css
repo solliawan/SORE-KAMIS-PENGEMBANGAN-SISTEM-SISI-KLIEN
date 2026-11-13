@@ -1,0 +1,236 @@
+/* Reset dasar agar perhitungan ukuran kotak akurat */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f4f5f7;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    /* 1. PENGATURAN MARGIN HALAMAN RESPONSIF */
+    .page-wrapper {
+      /* Lebar maksimal 1200px sesuai sketsa, tapi menyisakan margin 16px kiri-kanan di HP */
+      width: min(100% - 32px, 1200px);
+      margin-inline: auto; /* Otomatis berada di tengah pada layar besar */
+      margin-top: 0;       /* Menempel di atas untuk Header */
+      margin-bottom: 48px; /* Jarak aman di bagian bawah halaman */
+      background-color: #ffffff;
+      border-inline: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Margin samping sedikit lebih lega (24px kiri-kanan) untuk layar Tablet ke atas */
+    @media (min-width: 768px) {
+      .page-wrapper {
+        width: min(100% - 48px, 1200px);
+      }
+    }
+
+    /* 2. HEADER (Tinggi minimal 80px sesuai sketsa) */
+    .header {
+      min-height: 80px;
+      padding: 16px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 2px solid #111827;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #374151;
+    }
+
+    .search-box {
+      padding: 6px 12px;
+      border: 1px solid #9ca3af;
+      border-radius: 4px;
+    }
+
+    /* 3. BREAKING NEWS TICKER */
+    .breaking-ticker {
+      background-color: #13a5e9;
+      color: #ffffff;
+      padding: 10px 24px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ticker-badge {
+      background-color: #ffffff;
+      color: #dc2626;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    /* 4. GRID UTAMA (8-COL / 4-COL DENGAN GAP 20PX) */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 8fr 4fr; /* Rasio 8 kolom kiri, 4 kolom kanan */
+      gap: 20px;                      /* Sesuai label "gap 20px" di sketsa */
+      padding: 24px;
+    }
+
+    /* Otomatis berubah jadi 1 kolom penuh saat dibuka di Tablet / HP */
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+    }
+
+    /* 5. KOLOM KIRI: MAIN HERO & LIVE TIMELINE */
+    .hero-media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #e5e7eb;
+      border: 1px solid #9ca3af;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Memenuhi seluruh kotak secara proporsional tanpa gepeng */
+    object-position: center 20%; /* Menggeser fokus crop sedikit ke atas agar kepala tidak terpotong */
+    }
+
+    .hero-title {
+      /* Ukuran huruf otomatis mengecil di HP dan membesar di Desktop */
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero-lead {
+      color: #4b5563;
+      margin-bottom: 32px;
+    }
+
+    /* Live Updates Timeline */
+    .timeline-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .timeline-list {
+      border-left: 2px solid #dc2626;
+      margin-left: 8px;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      background-color: #dc2626;
+      border-radius: 50%;
+    }
+
+    .timeline-time {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #dc2626;
+    }
+
+    /* 6. KOLOM KANAN (SIDEBAR) */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .widget-box {
+      border: 1px solid #e5e7eb;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    .widget-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #111827;
+      padding-bottom: 6px;
+    }
+
+    .trending-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .live-banner {
+      aspect-ratio: 16 / 9;
+      background-color: #fef2f2;
+      border: 1px dashed #dc2626;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #dc2626;
+    }
+
+    .popular-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding-block: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .popular-item:last-child {
+      border-bottom: none;
+    }
+
+    .popular-thumb {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      background-color: #e5e7eb;
+      border: 1px solid #9ca3af;
+    }
