@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stayle.css">
+</head>
+<body>
+    <h1>FORM SEMINAR</h1>
+    <form enctype="multipart/form-data" action="https:" method="POST">
+        <table>
+            <tr>
+                <td><label for="nama">Nama</label></td>
+                <td>:</td>
+                <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>:</td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="prodi">Prodi</label></td>
+                <td>:</td>
+                <td>
+                    <select id="prodi" name="prodi">
+                        <option value="SI">Sistem Informasi</option>
+                        <option value="TI">Teknologi Informasi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="alamat">Alamat</label></td>
+                <td>:</td>
+                <td><textarea id="alamat" name="alamat" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;">
+                    <button type="submit">Daftar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h2>Peserta</h2>
+    <table border="1" cellpadding= "5"  cellspacing="0">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Prodi</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Budi Santoso</td>
+            <td rowspan="2">S1</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Budi Santoso</td>
+        </tr>
+        <tr>
+            <td colspan="2">Jumlah Peserta</td>
+            <td>2</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

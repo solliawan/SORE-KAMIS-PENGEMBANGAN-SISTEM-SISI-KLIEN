@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KopiBali</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f2eb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* navigasi */
+    header {
+      background-color: #e39d77;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+
+    /* Main Container / Content */
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+
+    /* item kartu */
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card-image {
+      background-color: #dcdcdc;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #777;
+      font-weight: bold;
+    }
+
+    /* Badge Favorit */
+    .badge-favorit {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #d82b48;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: normal;
+    }
+
+    .card-body {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
+      text-align: justify;
+    }
+
+    .card-price {
+      color: #b8860b;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color:  #e39d77;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo"> KopiBali</div>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#menu">Menu</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- Content / kartu -->
+  <main>
+    <!--kartu 1 -->
+    <div class="card">
+      <div class="card-image">
+        <span class="badge-favorit">Favorit</span>
+        Kopi Kintamani
+      </div>
+      <div class="card-body">
+        <div class="card-title">Kopi Kintamani</div>
+        <div class="card-price">Rp 20.000</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus placeat quo sed obcaecati ducimus quidem laboriosam cupiditate perferendis maxime neque. Nam ratione hic dolorem error praesentium voluptatum quidem saepe molestiae!</p>
+      </div>
+    </div>
+
+    <!-- kartu2 -->
+    <div class="card">
+      <div class="card-image">
+        Es Kopi Susu
+      </div>
+      <div class="card-body">
+        <div class="card-title">Es Kopi Susu</div>
+        <div class="card-price">Rp 21.000</div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum nobis, officiis dignissimos magnam eos temporibus voluptatibus saepe inventore quidem autem minus aliquam reprehenderit? Odio, ea et laboriosam minima beatae consequatur.</p>
+      </div>
+    </div>
+
+    <!-- kartu 3 -->
+    <div class="card">
+      <div class="card-image">
+        Teh Tarik
+      </div>
+      <div class="card-body">
+        <div class="card-title">Teh Tarik</div>
+        <div class="card-price">Rp 15.000</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quo sit, sed provident quasi mollitia explicabo minima error eligendi ab, dolorum deleniti nisi, obcaecati veniam minus molestiae commodi inventore reprehenderit.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>Jl. Raya Puputan, Denpasar</div>
+    <div>Buka 08.00–22.00</div>
+    <div>@kopibali</div>
+  </footer>
+
+</body>
+</html>
